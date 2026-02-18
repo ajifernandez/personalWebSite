@@ -57,33 +57,32 @@ jQuery(function ($) {
     }());
 
     // -------------------------------------------------------
-    // Smooth scroll for sidebar nav links
+    // Smooth scroll for nav links
     // -------------------------------------------------------
     (function () {
-        document.querySelectorAll('.sidebar-nav a[href^="#"]').forEach(function (link) {
+        document.querySelectorAll('.nav-menu a[href^="#"]').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
                 var target = document.querySelector(this.getAttribute('href'));
-                if (!target) return;
-
-                // The right column is the scrollable container
-                var rightCol = document.querySelector('.right-col-block');
-                if (rightCol) {
-                    var offset = target.offsetTop;
-                    rightCol.scrollTo({ top: offset, behavior: 'smooth' });
-                } else {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                if (target) {
+                    var navHeight = document.querySelector('.top-nav').offsetHeight;
+                    var targetOffset = target.offsetTop - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetOffset,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
     }());
 
     // -------------------------------------------------------
-    // Active nav link on scroll (IntersectionObserver)
+    // Active nav link on scroll
     // -------------------------------------------------------
     (function () {
         var sections  = document.querySelectorAll('section[id]');
-        var navLinks  = document.querySelectorAll('.sidebar-nav a.nav-link');
+        var navLinks  = document.querySelectorAll('.nav-menu a');
 
         if (!sections.length || !navLinks.length) return;
 
@@ -92,16 +91,15 @@ jQuery(function ($) {
                 if (entry.isIntersecting) {
                     var id = entry.target.getAttribute('id');
                     navLinks.forEach(function (link) {
-                        link.classList.toggle(
-                            'active',
-                            link.getAttribute('href') === '#' + id
-                        );
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
                     });
                 }
             });
         }, {
-            root      : document.querySelector('.right-col-block'),
-            rootMargin: '0px 0px -60% 0px',
+            rootMargin: '-10% 0px -85% 0px',
             threshold : 0
         });
 
