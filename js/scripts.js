@@ -53,4 +53,26 @@ jQuery(function ($) {
         });
     }());
 
+    // -------------------------------------------------------
+    // Light / dark theme toggle
+    // -------------------------------------------------------
+    (function () {
+        var btn  = document.getElementById('theme-toggle');
+        var root = document.documentElement;
+        if (!btn) return;
+
+        function render() {
+            var dark = root.dataset.theme === 'dark';
+            btn.textContent = dark ? '\u2600' : '\u263E';
+            btn.setAttribute('aria-pressed', dark);
+        }
+
+        btn.addEventListener('click', function () {
+            root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+            try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+            render();
+        });
+        render();
+    }());
+
 }); // jQuery end
