@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agustín Jiménez | Senior Software Engineer</title>
     <meta name="description" content="Agustín Jiménez is a software engineer with nearly 14 years of experience and almost six years in Python backend development: APIs, e-commerce integrations, databases and asynchronous workflows.">
-    <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="https://ajifernandez.github.io/personalWebSite/">
 
     <meta property="og:type" content="website">
@@ -17,171 +16,356 @@
     <meta name="twitter:card" content="summary">
 
     <link href="favicon.png" rel="icon" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
+<body id="page-top">
+<div id="main-wrapper">
 
-<header class="site-header">
-    <div class="wrap bar">
-        <span class="brand">Agustín Jiménez</span>
-        <nav aria-label="Main">
-            <a href="#about">About</a>
-            <a href="#strengths">Strengths</a>
+
+<!-- ===================== TOP NAVIGATION ===================== -->
+<nav class="top-nav">
+    <div class="container">
+        <div class="nav-brand">Agustín Jiménez</div>
+        <div class="nav-menu">
+            <a href="#about" class="active">About</a>
+            <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
-        </nav>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================== HERO SECTION ===================== -->
+<header class="hero">
+    <div class="container">
+        <div class="avatar-ring">
+            <img src="img/img-profile.png" alt="Agustín Jiménez Fernández">
+        </div>
+        <h1>Agustín Jiménez Fernández</h1>
+        <div class="lead">Senior Software Engineer · Backend &amp; Platform Engineering</div>
+        <p class="hero-sub">Building reliable backend systems, solving complex engineering problems, and improving developer experience.</p>
+
+        <ul class="social-icon">
+            <li>
+                <a href="https://es.linkedin.com/in/ajifernandez" title="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/ajifernandez" title="GitHub" target="_blank" rel="noopener">
+                    <i class="fa fa-github-alt"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:agustinjf87@gmail.com" title="Email">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </header>
 
-<main id="main">
+<main id="main-content">
 
-    <section class="hero wrap" aria-labelledby="hero-title">
-        <h1 id="hero-title">Agustín Jiménez</h1>
-        <p class="headline">Senior Software Engineer · Backend &amp; Platform Engineering</p>
-        <p class="lede">Building reliable backend systems, solving complex engineering problems, and improving developer experience.</p>
-        <p class="cta">
-            <a class="btn" href="#experience">Professional experience</a>
-            <a class="btn-link" href="#contact">Get in touch</a>
-        </p>
-        <ul class="links" aria-label="Profiles">
-            <li><a href="https://es.linkedin.com/in/ajifernandez" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/ajifernandez" rel="noopener">GitHub</a></li>
-            <li><a href="mailto:agustinjf87@gmail.com">agustinjf87@gmail.com</a></li>
-        </ul>
-    </section>
-
-    <section id="about" class="wrap" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <div class="prose">
-            <p>I'm a software engineer with nearly 14 years of experience building software, including almost six years focused on Python and backend development.</p>
-            <p>I enjoy working on complex engineering problems: understanding how systems behave, tracing issues across service boundaries, improving data flows, and designing solutions that remain maintainable as products evolve.</p>
-            <p>At Plytix I work in an e-commerce and product-data environment where backend architecture, external integrations, asynchronous processing and data consistency are central to the engineering challenges. My experience spans backend services, external integrations, APIs, databases, asynchronous processing, and enterprise software. I value clear technical reasoning, pragmatic architecture, and solving the underlying problem rather than adding unnecessary complexity.</p>
-            <p>I have worked remotely since July 2016. It is a cornerstone of how I balance work and family life, and it has made me a deliberate written communicator and a self-directed engineer.</p>
-            <p>I like staying hands-on with code while contributing to technical decisions and helping teams deliver reliable software. I'm particularly interested in backend architecture, platform engineering, developer tooling, system reliability, and engineering environments that value autonomy and thoughtful written communication.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>About</h2>
+                    </div>
+                    <div class="intro-content">
+            <p class="intro-sub">I'm a software engineer with nearly 14 years of experience building software, including almost six years focused on Python and backend development.</p>
+            <p class="intro-sub">I enjoy working on complex engineering problems: understanding how systems behave, tracing issues across service boundaries, improving data flows, and designing solutions that remain maintainable as products evolve.</p>
+            <p class="intro-sub">At Plytix I work in an e-commerce and product-data environment where backend architecture, external integrations, asynchronous processing and data consistency are central to the engineering challenges. My experience spans backend services, external integrations, APIs, databases, asynchronous processing, and enterprise software. I value clear technical reasoning, pragmatic architecture, and solving the underlying problem rather than adding unnecessary complexity.</p>
+            <p class="intro-sub">I have worked remotely since July 2016. It is a cornerstone of how I balance work and family life, and it has made me a deliberate written communicator and a self-directed engineer.</p>
+            <p class="intro-sub">I like staying hands-on with code while contributing to technical decisions and helping teams deliver reliable software. I'm particularly interested in backend architecture, platform engineering, developer tooling, system reliability, and engineering environments that value autonomy and thoughtful written communication.</p>
+        </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="strengths" class="wrap" aria-labelledby="strengths-title">
-        <h2 id="strengths-title">Technical strengths</h2>
-        <dl class="strengths">
-            <div>
-                <dt>Backend engineering</dt>
-                <dd>Python, FastAPI, REST APIs, distributed application workflows.</dd>
+    <!-- SKILLS -->
+    <section id="skills" class="section-wrapper gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Technical Strengths</h2>
+                    </div>
+                </div>
             </div>
-            <div>
-                <dt>Data and persistence</dt>
-                <dd>PostgreSQL, MongoDB, Redis.</dd>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="skills-grid central-grid">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">Celery</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Shopify</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag">GWT</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">Angular</span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <dt>Messaging and async work</dt>
-                <dd>Celery, RabbitMQ.</dd>
-            </div>
-            <div>
-                <dt>Integrations</dt>
-                <dd>Shopify and other e-commerce / product information systems, external APIs.</dd>
-            </div>
-            <div>
-                <dt>Runtime and tooling</dt>
-                <dd>Docker, Kubernetes, Linux, Git.</dd>
-            </div>
-            <div>
-                <dt>Engineering practice</dt>
-                <dd>Debugging complex issues, root-cause analysis, system design, code quality and testing, maintainable abstractions and tooling, technical leadership of small teams.</dd>
-            </div>
-            <div>
-                <dt>Earlier work</dt>
-                <dd>Java, Hibernate, GWT, Swing, Struts2, Oracle DB (enterprise software at Indra); Android; Angular.</dd>
-            </div>
-        </dl>
+        </div>
     </section>
 
-    <section id="experience" class="wrap" aria-labelledby="exp-title">
-        <h2 id="exp-title">Professional experience</h2>
-
-        <article class="job">
-            <div class="when">Jan 2021 – Present</div>
-            <div>
-                <h3>Senior Software Engineer <span>· Plytix</span></h3>
-                <p>Backend engineer in a complex e-commerce and product information management environment, including the integration between Plytix and Shopify.</p>
-                <ul>
-                    <li>Design, develop and maintain backend services and integrations.</li>
-                    <li>Build and evolve APIs and asynchronous workflows using Python and related backend technologies.</li>
-                    <li>Work with relational and NoSQL databases, caching and messaging systems to support reliable data processing and service integration.</li>
-                    <li>Investigate complex production issues, identify root causes and implement sustainable technical solutions.</li>
-                    <li>Contribute to architectural decisions, code quality, testing and maintainability across backend services.</li>
-                    <li>Collaborate with engineers and product stakeholders to turn business requirements into robust technical implementations.</li>
-                </ul>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Professional Experience</h2>
+                    </div>
+                </div>
             </div>
-        </article>
 
-        <article class="job">
-            <div class="when">Jun 2012 – Jan 2021</div>
-            <div>
-                <h3>Indra <span>· 8 years 8 months</span></h3>
-                <p>Enterprise software for railway management, document and configuration management, and defense R&amp;D, mostly in Java.</p>
-                <ul class="roles">
-                    <li>
-                        <strong>Senior Java Software Engineer</strong> <span class="when">Mar 2020 – Jan 2021</span><br>
-                        New interfaces for ESA's PAZ project, NTA PDSSupervision and RME (GWT, Hibernate, PostgreSQL, Oracle), and horizontal development of new railway applications.
-                    </li>
-                    <li>
-                        <strong>Team Leader</strong> <span class="when">Jun 2019 – Mar 2020</span><br>
-                        Led development of the new train system SITRA+.
-                    </li>
-                    <li>
-                        <strong>Senior Software Development Engineer</strong> <span class="when">Nov 2015 – Jun 2019</span><br>
-                        Engineer in the architecture team behind the "DaVinci" R&amp;D application family. Built a forest-fire prevention application for defense (Java, Swing, C#, Oracle). Led a team of four on document and configuration management systems for rail operators in Turkey and Saudi Arabia (Java, Oracle, Redis) until December 2017. Led a team of five maintaining a real-time railway management system in Spain (Jan 2016 – Apr 2018).
-                    </li>
-                    <li>
-                        <strong>Junior Software Development Engineer</strong> <span class="when">Jun 2013 – Nov 2015</span><br>
-                        Client and server applications in Java for train management and planning (Spain, Morocco), document and configuration management (Lithuania, Turkey, Saudi Arabia) and automatic crew and locomotive assignment for the Málaga subway (Swing, Struts2, Oracle, Redis).
-                    </li>
-                    <li>
-                        <strong>Scholarship Holder</strong> <span class="when">Jun 2012 – May 2013</span><br>
-                        Practical training within the master's degree in computer science applied to mobile telecommunications.
-                    </li>
-                </ul>
-            </div>
-        </article>
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Jan 2021 – Present</span>
+                                <img src="./img/companies/plytix.svg" class="company-logo" alt="Plytix" style="display: block; margin-top: 10px; margin-left: auto;">
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Senior Software Engineer · Plytix</h3>
+                                <p class="role-description">Backend engineer in a complex e-commerce and product information management environment, including the integration between Plytix and Shopify.</p>
+                                <ul style="margin-top: 15px;">
+                                    <li>Design, develop and maintain backend services and integrations.</li>
+                                    <li>Build and evolve APIs and asynchronous workflows using Python and related backend technologies.</li>
+                                    <li>Work with relational and NoSQL databases, caching and messaging systems to support reliable data processing and service integration.</li>
+                                    <li>Investigate complex production issues, identify root causes and implement sustainable technical solutions.</li>
+                                    <li>Contribute to architectural decisions, code quality, testing and maintainability across backend services.</li>
+                                    <li>Collaborate with engineers and product stakeholders to turn business requirements into robust technical implementations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-        <article class="job">
-            <div class="when">Jan 2013 – Jun 2014</div>
-            <div>
-                <h3>Freelance developer</h3>
-                <p>Android applications (Lactancia Fármacos, Babycontrol) and a website.</p>
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Mar 2020 – Jan 2021</span>
+                                <img src="./img/companies/indra.jpg" class="company-logo" alt="Indra" style="display: block; margin-top: 10px; margin-left: auto;">
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Senior Java Software Engineer · Indra</h3>
+                                <p class="role-description">New interfaces for ESA's PAZ project, NTA PDSSupervision and RME (GWT, Hibernate, PostgreSQL, Oracle), plus horizontal development of new railway applications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Jun 2019 – Mar 2020</span>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Team Leader · Indra</h3>
+                                <p class="role-description">Led development of the new train system SITRA+.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Nov 2015 – Jun 2019</span>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Senior Software Development Engineer · Indra</h3>
+                                <p class="role-description">Engineer in the architecture team behind the "DaVinci" R&amp;D application family.</p>
+                                <ul style="margin-top: 15px;">
+                                    <li>Built a forest-fire prevention application for defense (Java, Swing, C#, Oracle).</li>
+                                    <li>Led a team of four on document and configuration management systems for rail operators in Turkey and Saudi Arabia (Java, Oracle, Redis) until December 2017.</li>
+                                    <li>Led a team of five maintaining a real-time railway management system in Spain (Jan 2016 – Apr 2018).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Jun 2013 – Nov 2015</span>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Junior Software Development Engineer · Indra</h3>
+                                <p class="role-description">Client and server Java applications for train management and planning (Spain, Morocco), document and configuration management (Lithuania, Turkey, Saudi Arabia), and automatic crew and locomotive assignment for the Málaga subway (Swing, Struts2, Oracle, Redis).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Jun 2012 – May 2013</span>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Scholarship Holder · Indra</h3>
+                                <p class="role-description">Practical training within the master's degree in computer science applied to mobile telecommunications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expertise-item">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                <span class="date-badge">Jan 2013 – Jun 2014</span>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Freelance Developer · Freelance</h3>
+                                <p class="role-description">Android applications (Lactancia Fármacos, Babycontrol) and a website.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+                </div>
             </div>
-        </article>
+        </div>
     </section>
 
-    <section id="education" class="wrap" aria-labelledby="edu-title">
-        <h2 id="edu-title">Education, certifications and languages</h2>
-        <ul class="edu">
-            <li><span class="when">2015 – 2016</span> Degree in Computer Engineering (Grado en Ingeniería de Computadores), University of Málaga</li>
-            <li><span class="when">2014 – 2015</span> Adaptation course in Computer Engineering, University of Málaga</li>
-            <li><span class="when">2011 – 2013</span> Master in Computer Science Applied to Mobile Telecommunications (Máster en Informática Aplicada a Telecomunicaciones Móviles), University of Málaga</li>
-            <li><span class="when">2007 – 2011</span> Technical Engineering in Computer Systems, University of Málaga</li>
-            <li><span class="when">2013</span> Android: Application Programming, Universitat Politècnica de València</li>
-            <li><span class="when">2013</span> CS188.1x Artificial Intelligence, UC Berkeley (online)</li>
-        </ul>
-        <h3 class="sub">Certifications</h3>
-        <p>Artificial Intelligence · Introduction to Computer Science and Programming · Shaping up with Angular.js</p>
-        <h3 class="sub">Languages</h3>
-        <p>English: B2 (full professional proficiency)</p>
+    <!-- EDUCATION -->
+    <section id="education" class="section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>Education</h2>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>2015 – 2016</small>
+                        <h3>Degree in Computer Engineering (Grado en Ingeniería de Computadores)</h3>
+                        <h4>University of Málaga</h4>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>2014 – 2015</small>
+                        <h3>Adaptation Course in Computer Engineering</h3>
+                        <h4>University of Málaga</h4>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>2011 – 2013</small>
+                        <h3>Master in Computer Science Applied to Mobile Telecommunications</h3>
+                        <h4>University of Málaga</h4>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>2007 – 2011</small>
+                        <h3>Technical Engineering in Computer Systems</h3>
+                        <h4>University of Málaga</h4>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>2013</small>
+                        <h3>Android: Application Programming</h3>
+                        <h4>Universitat Politècnica de València</h4>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>2013</small>
+                        <h3>CS188.1x – Artificial Intelligence</h3>
+                        <h4>UC Berkeley (online)</h4>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>Certifications</small>
+                        <h3>Artificial Intelligence · Introduction to Computer Science and Programming · Shaping up with Angular.js</h3>
+                    </div>
+
+                    <div class="content-item education-item">
+                        <small>Languages</small>
+                        <h3>English: B2 (full professional proficiency)</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-wrapper gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                            <div class="contact-info">
+                                <strong>Email</strong>
+                                <a href="mailto:agustinjf87@gmail.com">agustinjf87@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa fa-linkedin"></i></div>
+                            <div class="contact-info">
+                                <strong>LinkedIn</strong>
+                                <a href="https://es.linkedin.com/in/ajifernandez" target="_blank" rel="noopener">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa fa-github"></i></div>
+                            <div class="contact-info">
+                                <strong>GitHub</strong>
+                                <a href="https://github.com/ajifernandez" target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
-<footer id="contact" class="site-footer">
-    <div class="wrap">
-        <h2>Contact</h2>
-        <ul class="links">
-            <li><a href="mailto:agustinjf87@gmail.com">agustinjf87@gmail.com</a></li>
-            <li><a href="https://es.linkedin.com/in/ajifernandez" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/ajifernandez" rel="noopener">GitHub</a></li>
-        </ul>
-        <p class="copy">&copy; 2026 Agustín Jiménez</p>
+<footer class="footer">
+    <div class="container text-center">
+        <div class="copytext">&copy; 2026 Agustín Jiménez Fernández</div>
     </div>
 </footer>
+</div>
+<!-- #main-wrapper -->
+
+<!-- jquery -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
