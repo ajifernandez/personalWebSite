@@ -830,13 +830,29 @@ a:hover, a:focus {
 .expertise-item .sub-project { margin-top: 20px; }
 .expertise-item .sub-project ul { margin-top: 0; }
 
+
+.skill-clouds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.skill-cloud {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 36px;
+    padding: 18px 24px 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+}
 .skill-group-label {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-muted);
-    text-align: center;
-    margin: 24px 0 10px;
+    margin: 0 0 10px;
 }
-.skill-group-label:first-child { margin-top: 0; }
+.skill-cloud .skills-grid { justify-content: center; }
