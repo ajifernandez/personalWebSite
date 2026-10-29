@@ -827,3 +827,5 @@ a:hover, a:focus {
     .section-wrapper { padding: 28px 20px; }
     .interest-grid { grid-template-columns: 1fr 1fr; }
 }
+.expertise-item .sub-project { margin-top: 20px; }
+.expertise-item .sub-project ul { margin-top: 0; }
