@@ -23,7 +23,33 @@ Author: Agustín Jiménez Fernández
     --shadow-lg        : 0 10px 30px rgba(28, 25, 23, 0.12);
     --radius-sm        : 8px;
     --radius-md        : 12px;
+    --card-bg          : #ffffff;
+    --tag-bg           : #fef3c7;
+    --tag-bg-hover     : #fde68a;
+    --nav-bg           : rgba(253, 251, 247, 0.9);
     --transition       : 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Dark theme: explicit choice wins, otherwise follow the system */
+:root[data-theme="dark"] {
+    --accent           : #f59e0b;
+    --accent-light     : #fbbf24;
+    --accent-glow      : rgba(245, 158, 11, 0.15);
+    --text-primary     : #f5f5f4;
+    --text-secondary   : #d6d3d1;
+    --text-muted       : #a8a29e;
+    --surface          : #171513;
+    --surface-alt      : #100f0e;
+    --border           : rgba(168, 162, 158, 0.18);
+    --shadow-sm        : 0 1px 3px rgba(0,0,0,0.4);
+    --shadow-md        : 0 4px 12px rgba(0,0,0,0.4);
+    --shadow-lg        : 0 10px 30px rgba(0,0,0,0.5);
+    --card-bg          : #1f1c1a;
+    --tag-bg           : rgba(245, 158, 11, 0.14);
+    --tag-bg-hover     : rgba(245, 158, 11, 0.26);
+    --nav-bg           : rgba(23, 21, 19, 0.9);
+    color-scheme: dark;
 }
 
 /* =============================================
@@ -109,7 +135,7 @@ a:hover, a:focus {
     position: sticky;
     top: 0;
     width: 100%;
-    background: rgba(253, 251, 247, 0.9); /* --surface with opacity */
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid var(--border);
@@ -325,7 +351,7 @@ a:hover, a:focus {
     border-radius: 6px;
     font-size    : 12px;
     font-weight  : 600;
-    background   : #fef3c7;
+    background   : var(--tag-bg);
     color        : var(--accent);
     border       : 1px solid rgba(217, 119, 6, 0.2);
     transition   : all var(--transition);
@@ -333,7 +359,7 @@ a:hover, a:focus {
 }
 
 .skill-tag:hover {
-    background: #fde68a;
+    background: var(--tag-bg-hover);
     border-color: var(--accent);
     transform : translateY(-1px);
 }
@@ -344,7 +370,7 @@ a:hover, a:focus {
 .expertise-item {
     margin-bottom: 48px;
     padding      : 40px;
-    background   : #ffffff;
+    background   : var(--card-bg);
     border-radius: var(--radius-md);
     box-shadow   : var(--shadow-sm);
     border       : 1px solid var(--border);
@@ -608,7 +634,7 @@ a:hover, a:focus {
 
 .interest-card {
     padding      : 24px;
-    background   : #ffffff;
+    background   : var(--card-bg);
     border-radius: var(--radius-md);
     border       : 1px solid var(--border);
     text-align   : center;
@@ -654,7 +680,7 @@ a:hover, a:focus {
     align-items  : center;
     gap          : 16px;
     padding      : 16px 20px;
-    background   : #ffffff;
+    background   : var(--card-bg);
     border-radius: var(--radius-sm);
     border       : 1px solid var(--border);
     transition   : transform var(--transition), box-shadow var(--transition);
@@ -670,7 +696,7 @@ a:hover, a:focus {
     width        : 44px;
     height       : 44px;
     border-radius: 50%;
-    background   : #fef3c7;
+    background   : var(--tag-bg);
     display      : flex;
     align-items  : center;
     justify-content: center;
@@ -840,8 +866,8 @@ a:hover, a:focus {
     margin: 0 auto;
 }
 .skill-cloud {
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
     border-radius: 36px;
     padding: 18px 24px 14px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
@@ -856,3 +882,20 @@ a:hover, a:focus {
     margin: 0 0 10px;
 }
 .skill-cloud .skills-grid { justify-content: center; }
+
+.nav-menu { margin-left: auto; }
+.theme-toggle {
+    margin-left: 24px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 900px) { .theme-toggle { margin-left: auto; } }
