@@ -924,8 +924,24 @@ a:hover, a:focus {
 .ph { color: var(--text-muted); font-size: 12px; font-style: italic; }
 @media (max-width: 767px) {
     .expertise-item { padding: 24px; }
-    .expertise-item .text-right { text-align: left; margin-bottom: 12px; }
+    .exp-meta { margin-bottom: 12px; }
     .expertise-item .company-logo { margin-left: 0; }
     .hero { padding: 72px 0 56px; }
     .hero h1 { font-size: 32px; }
+}
+
+
+/* Layout helpers (replace Bootstrap grid) */
+body { margin: 0; }
+p { margin-top: 0; }
+img { max-width: 100%; }
+button { font: inherit; }
+.text-center { text-align: center; }
+.narrow { max-width: 800px; margin: 0 auto; }
+.narrow-sm { max-width: 760px; }
+.exp-row { display: grid; grid-template-columns: 180px 1fr; gap: 24px; }
+.exp-meta { text-align: right; }
+@media (max-width: 767px) {
+    .exp-row { grid-template-columns: 1fr; gap: 0; }
+    .exp-meta { text-align: left; }
 }
