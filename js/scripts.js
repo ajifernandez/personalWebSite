@@ -75,4 +75,36 @@ jQuery(function ($) {
         render();
     }());
 
+    // -------------------------------------------------------
+    // Copy email to clipboard
+    // -------------------------------------------------------
+    (function () {
+        var btn = document.getElementById('copy-email');
+        if (!btn) return;
+        var label = btn.querySelector('span');
+        btn.addEventListener('click', function () {
+            var done = function () {
+                label.textContent = 'Copied!';
+                setTimeout(function () { label.textContent = 'Copy email'; }, 2000);
+            };
+            var legacy = function () {
+                var ta = document.createElement('textarea');
+                ta.value = btn.dataset.email;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                var ok = false;
+                try { ok = document.execCommand('copy'); } catch (e) {}
+                document.body.removeChild(ta);
+                if (ok) done(); else window.location.href = 'mailto:' + btn.dataset.email;
+            };
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(btn.dataset.email).then(done, legacy);
+            } else {
+                legacy();
+            }
+        });
+    }());
+
 }); // jQuery end

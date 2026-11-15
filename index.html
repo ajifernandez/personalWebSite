@@ -18,7 +18,7 @@
     <link href="favicon.png" rel="icon" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -34,6 +34,7 @@
         <div class="nav-brand">Agustín Jiménez</div>
         <div class="nav-menu">
             <a href="#about" class="active">About</a>
+            <a href="#approach">Approach</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
@@ -52,6 +53,11 @@
         <h1>Agustín Jiménez Fernández</h1>
         <div class="lead">Senior Software Engineer · Backend &amp; Platform Engineering</div>
         <p class="hero-sub">Building reliable backend systems, solving complex engineering problems, and improving developer experience.</p>
+
+        <div class="cta-row">
+            <a class="btn-cta btn-cta-primary" href="cv/Agustin_Jimenez_CV.pdf" download><i class="fa fa-download"></i> Download CV (PDF)</a>
+            <button type="button" class="btn-cta btn-cta-secondary" id="copy-email" data-email="agustinjf87@gmail.com"><i class="fa fa-clone"></i> <span>Copy email</span></button>
+        </div>
 
         <ul class="social-icon">
             <li>
@@ -95,174 +101,117 @@
         </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section-wrapper gray-bg">
+    <!-- APPROACH -->
+    <section id="approach" class="section-wrapper gray-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h2>Technical Strengths</h2>
-                    </div>
-                </div>
+            <div class="section-title"><h2>Engineering Philosophy &amp; Architecture</h2></div>
+            <div class="card-grid cols-3">
+                <article class="info-card">
+                    <h3>Pragmatic Architecture &amp; Reliability</h3>
+                    <p>Traceability and data consistency first. I pick the simplest design that holds up in production and avoid over-engineering.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Async &amp; Distributed Systems</h3>
+                    <p>Resilient, fault-tolerant flows across queues, workers and third-party APIs, built to fail safely and recover cleanly.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Remote-First &amp; Written Culture</h3>
+                    <p>Remote since 2016. Autonomy, clear documentation and deliberate written communication keep teams unblocked.</p>
+                </article>
             </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="skill-clouds">
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Backend & APIs</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">FastAPI</span>
-                                <span class="skill-tag">REST APIs</span>
-                            </div>
-                        </div>
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Databases</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">MongoDB</span>
-                                <span class="skill-tag">Redis</span>
-                            </div>
-                        </div>
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Messaging & async processing</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">RabbitMQ</span>
-                                <span class="skill-tag">Celery</span>
-                            </div>
-                        </div>
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Integrations</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">Shopify</span>
-                            </div>
-                        </div>
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Infrastructure & tooling</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">Linux</span>
-                                <span class="skill-tag">Git</span>
-                            </div>
-                        </div>
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Frontend</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">Angular</span>
-                                <span class="skill-tag">TypeScript</span>
-                            </div>
-                        </div>
-                        <div class="skill-cloud">
-                            <p class="skill-group-label">Earlier · Indra, 2012 – 2021</p>
-                            <div class="skills-grid ">
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">Hibernate</span>
-                                <span class="skill-tag">GWT</span>
-                                <span class="skill-tag">Swing</span>
-                                <span class="skill-tag">Struts2</span>
-                                <span class="skill-tag">Oracle</span>
-                                <span class="skill-tag">C#</span>
-                                <span class="skill-tag">Android</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-wrapper">
+        <div class="container">
+            <div class="section-title"><h2>Technical Strengths</h2></div>
+            <div class="card-grid cols-3">
+                <div class="skill-card"><p class="skill-group-label">Backend &amp; APIs</p><div class="skills-grid"><span class="skill-tag">Python</span><span class="skill-tag">FastAPI</span><span class="skill-tag">REST APIs</span></div></div>
+                <div class="skill-card"><p class="skill-group-label">Databases</p><div class="skills-grid"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Redis</span></div></div>
+                <div class="skill-card"><p class="skill-group-label">Messaging &amp; Async</p><div class="skills-grid"><span class="skill-tag">RabbitMQ</span><span class="skill-tag">Celery</span></div></div>
+                <div class="skill-card"><p class="skill-group-label">Infrastructure &amp; Tooling</p><div class="skills-grid"><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Linux</span><span class="skill-tag">Git</span></div></div>
+                <div class="skill-card"><p class="skill-group-label">Integrations</p><div class="skills-grid"><span class="skill-tag">Shopify</span></div></div>
+                <div class="skill-card"><p class="skill-group-label">Frontend</p><div class="skills-grid"><span class="skill-tag">Angular</span><span class="skill-tag">TypeScript</span></div></div>
+            </div>
+            <div class="skill-card legacy">
+                <p class="skill-group-label">Previous Enterprise Stack · Indra, 2012 – 2021</p>
+                <div class="skills-grid"><span class="skill-tag">Java</span><span class="skill-tag">Oracle</span><span class="skill-tag">GWT</span><span class="skill-tag">Hibernate</span><span class="skill-tag">Swing</span><span class="skill-tag">Struts2</span><span class="skill-tag">C#</span><span class="skill-tag">Android</span></div>
             </div>
         </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section-wrapper">
+    <section id="experience" class="section-wrapper gray-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h2>Professional Experience</h2>
+            <div class="section-title"><h2>Professional Experience</h2></div>
+
+            <div class="expertise-item">
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        <span class="date-badge">Jan 2021 – Present</span>
+                        <img src="./img/companies/plytix.svg" class="company-logo" alt="Plytix">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>Senior Software Engineer · Plytix</h3>
+                        <p class="role-description">Backend engineer in a complex e-commerce and product information management (PIM) platform, owning integrations such as Plytix ⇄ Shopify.</p>
+                        <ul>
+                            <li>Design and run the Plytix–Shopify integration, syncing data between a PIM and merchant storefronts with data consistency as the priority.</li>
+                            <li>Build asynchronous workflows on Celery and RabbitMQ that tolerate failures and external API limits.</li>
+                            <li>Develop FastAPI services over PostgreSQL and MongoDB, with Redis caching.</li>
+                            <li>Part of the on-call rotation, responding to production incidents.</li>
+                            <li>Tackle recurring incidents by setting up alerting and working directly with Customer Success to attack each problem as early as possible, then developing the technical solution as a hotfix to production.</li>
+                            <li>Shape architecture, code quality and testing practices so services stay maintainable as the product evolves.</li>
+                        </ul>
+                        <div class="skills-grid role-tags"><span class="skill-tag">Python</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Celery</span><span class="skill-tag">RabbitMQ</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Redis</span><span class="skill-tag">Shopify</span></div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    
-                    
-                    <div class="expertise-item">
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <span class="date-badge">Jan 2021 – Present</span>
-                                <img src="./img/companies/plytix.svg" class="company-logo" alt="Plytix" style="display: block; margin-top: 10px; margin-left: auto;">
-                            </div>
-                            <div class="col-sm-9">
-                                <h3>Senior Software Engineer · Plytix</h3>
-                                <p class="role-description">Backend engineer in a complex e-commerce and product information management environment, including the integration between Plytix and Shopify.</p>
-                                <ul style="margin-top: 15px;">
-                                    <li>Design, develop and maintain backend services and integrations.</li>
-                                    <li>Build and evolve APIs and asynchronous workflows using Python and related backend technologies.</li>
-                                    <li>Work with relational and NoSQL databases, caching and messaging systems to support reliable data processing and service integration.</li>
-                                    <li>Investigate complex production issues, identify root causes and implement sustainable technical solutions.</li>
-                                    <li>Contribute to architectural decisions, code quality, testing and maintainability across backend services.</li>
-                                    <li>Collaborate with engineers and product stakeholders to turn business requirements into robust technical implementations.</li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="expertise-item">
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        <span class="date-badge">Jun 2012 – Jan 2021</span>
+                        <img src="./img/companies/indra.jpg" class="company-logo" alt="Indra">
                     </div>
+                    <div class="col-sm-9">
+                        <h3>Indra · Intern to Team Leader</h3>
+                        <p class="role-description">Mission-critical enterprise software for railways and defense, mostly in Java. Part of the on-call rotation for production systems.</p>
 
-                    <div class="expertise-item">
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <span class="date-badge">Jun 2012 – Jan 2021</span>
-                                <img src="./img/companies/indra.jpg" class="company-logo" alt="Indra" style="display: block; margin-top: 10px; margin-left: auto;">
-                            </div>
-                            <div class="col-sm-9">
-                                <h3>Indra · 8 years 8 months</h3>
-                                <p class="role-description">Enterprise software for railway management, document and configuration management, and defense R&amp;D, mostly in Java. Progressed from scholarship holder to team leader.</p>
-
-                                <div class="sub-project">
-                                    <h4>2019 – 2021 · Team Leader, then Senior Java Software Engineer</h4>
-                                    <ul>
-                                        <li>Led development of the new train system SITRA+ (Jun 2019 – Mar 2020).</li>
-                                        <li>Built new interfaces for ESA's PAZ project, NTA PDSSupervision and RME with GWT, Hibernate, PostgreSQL and Oracle, and contributed to new railway applications (Mar 2020 – Jan 2021).</li>
-                                    </ul>
-                                </div>
-
-                                <div class="sub-project">
-                                    <h4>2015 – 2019 · Senior Software Development Engineer</h4>
-                                    <ul>
-                                        <li>Engineer in the architecture team behind the "DaVinci" R&amp;D application family.</li>
-                                        <li>Built a forest-fire prevention application for defense (Java, Swing, C#, Oracle).</li>
-                                        <li>Led a team of four on document and configuration management systems for rail operators in Turkey and Saudi Arabia (Java, Oracle, Redis) until December 2017.</li>
-                                        <li>Led a team of five maintaining a real-time railway management system in Spain (Jan 2016 – Apr 2018).</li>
-                                    </ul>
-                                </div>
-
-                                <div class="sub-project">
-                                    <h4>2012 – 2015 · Junior Software Development Engineer and scholarship</h4>
-                                    <ul>
-                                        <li>Client and server Java applications for train management and planning (Spain, Morocco) and document and configuration management (Lithuania, Turkey, Saudi Arabia).</li>
-                                        <li>Automatic crew and locomotive assignment for the Málaga subway (Struts2, Oracle).</li>
-                                        <li>Started as a scholarship holder during the master's degree (Jun 2012 – May 2013).</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="sub-project">
+                            <h4>2019 – 2021 · Team Leader → Senior Java Engineer</h4>
+                            <ul>
+                                <li>Led development of the new train system SITRA+.</li>
+                                <li>Built interfaces for ESA's PAZ project, NTA PDSSupervision and RME, and contributed to new railway applications.</li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <div class="expertise-item">
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <span class="date-badge">Jan 2013 – Jun 2014</span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h3>Freelance Developer · Freelance</h3>
-                                <p class="role-description">Android applications (Lactancia Fármacos, Babycontrol) and a website.</p>
-                            </div>
+                        <div class="sub-project">
+                            <h4>2015 – 2019 · Senior Software Development Engineer</h4>
+                            <ul>
+                                <li>Led a team of 5 maintaining a real-time railway management system in Spain.</li>
+                                <li>Led a team of 4 on document and configuration management for rail operators in Turkey and Saudi Arabia.</li>
+                                <li>Architecture team of the "DaVinci" R&amp;D application family; built a forest-fire prevention app for defense.</li>
+                            </ul>
                         </div>
+                        <div class="sub-project">
+                            <h4>2012 – 2015 · Intern → Junior Software Development Engineer</h4>
+                            <ul>
+                                <li>Java client/server apps for train management and planning (Spain, Morocco) and document management (Lithuania, Turkey, Saudi Arabia).</li>
+                                <li>Automatic crew and locomotive assignment for the Málaga subway.</li>
+                            </ul>
+                        </div>
+                        <div class="skills-grid role-tags"><span class="skill-tag">Java</span><span class="skill-tag">Oracle</span><span class="skill-tag">GWT</span><span class="skill-tag">Hibernate</span><span class="skill-tag">Redis</span></div>
                     </div>
+                </div>
+            </div>
 
-
-                    
-
+            <div class="expertise-item">
+                <div class="row">
+                    <div class="col-sm-3 text-right"><span class="date-badge">Jan 2013 – Jun 2014</span></div>
+                    <div class="col-sm-9">
+                        <h3>Freelance Developer</h3>
+                        <p class="role-description">Android applications (Lactancia Fármacos, Babycontrol) and a website.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -273,56 +222,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <div class="section-title">
-                        <h2>Education</h2>
-                    </div>
-
-                    <div class="content-item education-item">
-                        <small>2015 – 2016</small>
-                        <h3>Degree in Computer Engineering (Grado en Ingeniería de Computadores)</h3>
-                        <h4>University of Málaga</h4>
-                    </div>
-
-                    <div class="content-item education-item">
-                        <small>2014 – 2015</small>
-                        <h3>Adaptation Course in Computer Engineering</h3>
-                        <h4>University of Málaga</h4>
-                    </div>
+                    <div class="section-title"><h2>Education</h2></div>
 
                     <div class="content-item education-item">
                         <small>2011 – 2013</small>
                         <h3>Master in Computer Science Applied to Mobile Telecommunications</h3>
                         <h4>University of Málaga</h4>
                     </div>
-
                     <div class="content-item education-item">
-                        <small>2007 – 2011</small>
-                        <h3>Technical Engineering in Computer Systems</h3>
+                        <small>2015 – 2016</small>
+                        <h3>Degree in Computer Engineering (Grado en Ingeniería de Computadores)</h3>
                         <h4>University of Málaga</h4>
                     </div>
-
-                    <div class="content-item education-item">
-                        <small>2013</small>
-                        <h3>Android: Application Programming</h3>
-                        <h4>Universitat Politècnica de València</h4>
-                    </div>
-
                     <div class="content-item education-item">
                         <small>2013</small>
                         <h3>CS188.1x – Artificial Intelligence</h3>
                         <h4>UC Berkeley (online)</h4>
                     </div>
-
-                    <div class="content-item education-item">
-                        <small>Certifications</small>
-                        <h3>Artificial Intelligence · Introduction to Computer Science and Programming · Shaping up with Angular.js</h3>
-                    </div>
-
                     <div class="content-item education-item">
                         <small>Languages</small>
                         <h3>English: B2 (full professional proficiency)</h3>
                     </div>
-
                 </div>
             </div>
         </div>
