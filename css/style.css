@@ -945,3 +945,5 @@ button { font: inherit; }
     .exp-row { grid-template-columns: 1fr; gap: 0; }
     .exp-meta { text-align: left; }
 }
+
+.content-item .inst { font-size: 13px; color: var(--text-secondary); font-weight: 500; margin: 0 0 6px; }
