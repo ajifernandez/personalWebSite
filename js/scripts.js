@@ -1,4 +1,4 @@
-jQuery(function ($) {
+(function () {
     'use strict';
 
     // -------------------------------------------------------
@@ -63,7 +63,8 @@ jQuery(function ($) {
 
         function render() {
             var dark = root.dataset.theme === 'dark';
-            btn.textContent = dark ? '\u2600' : '\u263E';
+            btn.firstElementChild.textContent = dark ? '\u2600' : '\u263E';
+            btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
             btn.setAttribute('aria-pressed', dark);
         }
 
@@ -107,4 +108,4 @@ jQuery(function ($) {
         });
     }());
 
-}); // jQuery end
+}());

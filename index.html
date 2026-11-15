@@ -16,11 +16,12 @@
     <meta name="twitter:card" content="summary">
 
     <link href="favicon.png" rel="icon" type="image/png">
+    <link rel="preload" as="image" href="img/img-profile.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Agustín Jiménez Fernández","jobTitle":"Senior Software Engineer","worksFor":{"@type":"Organization","name":"Plytix"},"url":"https://ajifernandez.github.io/personalWebSite/","sameAs":["https://github.com/ajifernandez","https://es.linkedin.com/in/ajifernandez"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Málaga"}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script>try{var t=localStorage.getItem("theme");if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -40,7 +41,7 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </div>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><span aria-hidden="true"></span></button>
     </div>
 </nav>
 
@@ -61,17 +62,17 @@
 
         <ul class="social-icon">
             <li>
-                <a href="https://es.linkedin.com/in/ajifernandez" title="LinkedIn" target="_blank" rel="noopener">
+                <a href="https://es.linkedin.com/in/ajifernandez" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
                     <i class="fa fa-linkedin"></i>
                 </a>
             </li>
             <li>
-                <a href="https://github.com/ajifernandez" title="GitHub" target="_blank" rel="noopener">
+                <a href="https://github.com/ajifernandez" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
                     <i class="fa fa-github-alt"></i>
                 </a>
             </li>
             <li>
-                <a href="mailto:agustinjf87@gmail.com" title="Email">
+                <a href="mailto:agustinjf87@gmail.com" title="Email" aria-label="Email">
                     <i class="fa fa-envelope"></i>
                 </a>
             </li>
@@ -84,8 +85,8 @@
     <!-- ABOUT -->
     <section id="about" class="section-wrapper">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+            <div>
+                <div class="narrow">
                     <div class="section-title">
                         <h2>About</h2>
                     </div>
@@ -147,12 +148,12 @@
             <div class="section-title"><h2>Professional Experience</h2></div>
 
             <div class="expertise-item">
-                <div class="row">
-                    <div class="col-sm-3 text-right">
+                <div class="exp-row">
+                    <div class="exp-meta">
                         <span class="date-badge">Jan 2021 – Present</span>
                         <img src="./img/companies/plytix.svg" class="company-logo" alt="Plytix">
                     </div>
-                    <div class="col-sm-9">
+                    <div class="exp-body">
                         <h3>Senior Software Engineer · Plytix</h3>
                         <p class="role-description">Backend engineer in a complex e-commerce and product information management (PIM) platform, owning integrations such as Plytix ⇄ Shopify.</p>
                         <ul>
@@ -169,12 +170,12 @@
             </div>
 
             <div class="expertise-item">
-                <div class="row">
-                    <div class="col-sm-3 text-right">
+                <div class="exp-row">
+                    <div class="exp-meta">
                         <span class="date-badge">Jun 2012 – Jan 2021</span>
                         <img src="./img/companies/indra.jpg" class="company-logo" alt="Indra">
                     </div>
-                    <div class="col-sm-9">
+                    <div class="exp-body">
                         <h3>Indra · Intern to Team Leader</h3>
                         <p class="role-description">Mission-critical enterprise software for railways and defense, mostly in Java. Part of the on-call rotation for production systems.</p>
 
@@ -206,9 +207,9 @@
             </div>
 
             <div class="expertise-item">
-                <div class="row">
-                    <div class="col-sm-3 text-right"><span class="date-badge">Jan 2013 – Jun 2014</span></div>
-                    <div class="col-sm-9">
+                <div class="exp-row">
+                    <div class="exp-meta"><span class="date-badge">Jan 2013 – Jun 2014</span></div>
+                    <div class="exp-body">
                         <h3>Freelance Developer</h3>
                         <p class="role-description">Android applications (Lactancia Fármacos, Babycontrol) and a website.</p>
                     </div>
@@ -220,8 +221,8 @@
     <!-- EDUCATION -->
     <section id="education" class="section-wrapper">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+            <div>
+                <div class="narrow">
                     <div class="section-title"><h2>Education</h2></div>
 
                     <div class="content-item education-item">
@@ -251,15 +252,15 @@
     <!-- CONTACT -->
     <section id="contact" class="section-wrapper gray-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <div>
+                <div>
                     <div class="section-title">
                         <h2>Contact</h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+            <div>
+                <div class="narrow narrow-sm">
                     <div class="contact-grid">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fa fa-envelope"></i></div>
@@ -298,10 +299,8 @@
 </div>
 <!-- #main-wrapper -->
 
-<!-- jquery -->
-<script src="js/jquery-2.1.4.min.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
+
+
 <script src="js/scripts.js"></script>
 </body>
 </html>
